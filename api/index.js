@@ -6,6 +6,8 @@ const router = require('./router')
 const connectDb = require('./db')
 
 app.use(morgan('combined'))
+app.use(express.json())
+app.use(express.urlencoded());
 router(app)
 const port = process.env.PORT || 4000
 
